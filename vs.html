@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="./assets/css/basic.css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/common.css" />
+<script src="jquery-1.11.2.min.js"></script>
+<script src="underscore.js"></script>
+<title>이상형 월드컵</title>
+
+</head>
+<style>
+#mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9000;
+	background-color: #000;
+	display: none;
+}
+</style>
+<body class="" style="background: #333;">
+	<div id="mask">
+		<img id="winnerImg"
+			style="width: 40%; height: 60%; padding: 10%; padding-left: 30%;"
+			src="" />
+	</div>
+	<div style="width: 100%; height: 100%; background: #333;" id="mainDiv">
+		<div
+			style="display: block; position: relative; width: 100%; text-align: center; padding-top: 100px;">
+			<h2 id="title"
+				style="font-size: 50px; line-height: 1.3; color: #fff;">타이틀이
+				들어갑니다.</h2>
+		</div>
+		<div style="display: block; position: relative; padding: 2% 10%;">
+
+			<div
+				style="float: left; width: 45%; padding-left: 15px; padding-right: 15px;">
+				<div class="imgDiv" id="leftImg"
+					style="width: 100%; height: 100%; position: relative; padding-top: 100%; background: url(assets/img/sailor_walk.gif) center center no-repeat; background-size: contain;">
+					<span
+						style="display: block; position: absolute; top: 90%; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 7); opacity: 0.8;">
+						<h3 style="padding: 10px 20px 0 20px; margin-bottom: 0; font-size: 16px; line-height: 1.3; color: #fff;">그룹이름</h3>
+					</span>
+				</div>
+			</div>
+
+			<div
+				style="position: absolute; left: 50%; top: 45%; margin-left: -50px; padding-left: 15px; padding-right: 15px;">
+				<h5 style="font-size: 50px; color: #fff;">VS</h5>
+			</div>
+
+			<div
+				style="float: right; width: 45%; padding-left: 15px; padding-right: 15px;">
+				<div class="imgDiv" id="rightImg"
+					style="width: 100%; height: 100%; position: relative; padding-top: 100%; background: url(assets/img/sailor_walk.gif) center center no-repeat; background-size: contain;">
+					<span
+						style="display: block; position: absolute; top: 90%; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 7); opacity: 0.8;">
+						<h3 style="padding: 10px 20px 0 20px; margin-bottom: 0; font-size: 16px; line-height: 1.3; color: #fff;">그룹이름</h3>
+					</span> <a class="btn-smartsearch" href="javascript:void(0);"
+						onclick="ga('send', 'event', 'SMARTSEARCH', 'click', 'PC');{literal}dataLayer.push({'layerCategory': '상품상세','layerAction':'이미지서치','layerLabel': '','event' : 'ga_event','nonInteraction' : false});{/literal}">
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var _oriPicture = [ 
+                   {
+						"name" : "아이린",
+						"groupName" : "레드벨뱃",
+						"picture_location" : "1.gif"
+					},
+					{
+						"name" : "태연",
+						"groupName" : "소녀시대",
+						"picture_location" : "2.jpg"
+					},
+					{
+						"name" : "손나은",
+						"groupName" : "에이핑크",
+						"picture_location" : "3.gif"
+					},
+					{
+						"name" : "청하",
+						"groupName" : "가수",
+						"picture_location" : "4.jpg"
+					},
+					{
+						"name" : "수지",
+						"groupName" : "미스에이",
+						"picture_location" : "5.gif"
+					},
+					{
+						"name" : "윤아",
+						"groupName" : "소녀시대",
+						"picture_location" : "6.gif"
+					},
+					{
+						"name" : "설현",
+						"groupName" : "AOA",
+						"picture_location" : "7.gif"
+					},
+					{
+						"name" : "나연",
+						"groupName" : "트와이스",
+						"picture_location" : "8.gif"
+					},
+					{
+						"name" : "손예진",
+						"groupName" : "배우",
+						"picture_location" : "9.gif"
+					},
+					{
+						"name" : "한지민",
+						"groupName" : "배우",
+						"picture_location" : "10.gif"
+					},
+					{
+						"name" : "서현진",
+						"groupName" : "배우",
+						"picture_location" : "11.gif"
+					},
+					{
+						"name" : "선미",
+						"groupName" : "가수",
+						"picture_location" : "12.jpg"
+					},
+					{
+						"name" : "류진",
+						"groupName" : "itzy",
+						"picture_location" : "13.jpg"
+					},
+					{
+						"name" : "쯔위",
+						"groupName" : "트와이스",
+						"picture_location" : "14.jpg"
+					},
+					{
+						"name" : "도연",
+						"groupName" : "위키미키",
+						"picture_location" : "15.gif"
+					},
+					{
+						"name" : "설리",
+						"groupName" : "배우",
+						"picture_location" : "16.jpg"
+					},
+					{
+						"name" : "김연아",
+						"groupName" : "피겨선수",
+						"picture_location" : "17.gif"
+					},
+					{
+						"name" : "박민영",
+						"groupName" : "배우",
+						"picture_location" : "18.jpg"
+					},
+					{
+						"name" : "지수",
+						"groupName" : "블랙핑크",
+						"picture_location" : "19.jpg"
+					},
+					{
+						"name" : "아이유",
+						"groupName" : "솔로가수",
+						"picture_location" : "20.jpg"
+					},
+					{
+						"name" : "장원영",
+						"groupName" : "아이즈원",
+						"picture_location" : "21.jpg"
+					},
+					{
+						"name" : "연우",
+						"groupName" : "모모랜드",
+						"picture_location" : "22.jpg"
+					},
+					{
+						"name" : "성소",
+						"groupName" : "우주소녀",
+						"picture_location" : "23.jpg"
+					},
+					{
+						"name" : "제니",
+						"groupName" : "블랙핑크",
+						"picture_location" : "24.jpg"
+					},
+					{
+						"name" : "김유정",
+						"groupName" : "배우",
+						"picture_location" : "25.gif"
+					},
+					{
+						"name" : "김소현",
+						"groupName" : "배우",
+						"picture_location" : "26.jpg"
+					},
+					{
+						"name" : "하니",
+						"groupName" : "EXID",
+						"picture_location" : "27.jpg"
+					},
+					{
+						"name" : "유이",
+						"groupName" : "배우",
+						"picture_location" : "28.jpg"
+					},
+					{
+						"name" : "솔라",
+						"groupName" : "마마무",
+						"picture_location" : "29.png"
+					},
+					{
+						"name" : "강민경",
+						"groupName" : "다비치",
+						"picture_location" : "30.jpg"
+					},
+					{
+						"name" : "전지현",
+						"groupName" : "배우",
+						"picture_location" : "31.jpg"
+					},
+					{
+						"name" : "송혜교",
+						"groupName" : "배우",
+						"picture_location" : "32.jpg"
+					}
+				];
+
+	var worldCupModule = {
+		shuffleList : [],
+	    winner : [],
+	    round : 32,
+	    roundCount : 1,
+		shuffle : function() {
+			this.shuffleList = _.shuffle(_oriPicture);
+			this.renderTitle();
+		},
+		renderTitle : function(){
+			if(this.round == 2){
+				$('#title').text("결승");
+			}else{
+				$('#title').text(this.round +"강");	
+				
+			}
+			
+		},
+		renderRound : function(left, right){
+			var leftName = this.shuffleList[left].name;
+			var leftGroupName = this.shuffleList[left].groupName;
+			var leftPicLoc = this.shuffleList[left].picture_location;
+			
+			var rightName = this.shuffleList[right].name;
+			var rightGroupName = this.shuffleList[right].groupName;
+			var rightPicLoc = this.shuffleList[right].picture_location;
+			
+			var leftImg = $('#leftImg');
+			var rightImg = $('#rightImg');
+			
+			leftImg.css("background","url(img/"+leftPicLoc+") center center no-repeat").data("index",left);
+			leftImg.css("background-size","contain");
+			rightImg.css("background","url(img/"+rightPicLoc+") center center no-repeat").data("index",right);
+			rightImg.css("background-size","contain");
+			
+			leftImg.find('h3').text(leftGroupName + " " + leftName);
+			rightImg.find('h3').text(rightGroupName + " " + rightName);
+		},
+		setWinner : function(index){
+			this.winner.push(this.shuffleList[index]);
+		},
+		initShuffleList : function(){
+			this.shuffleList = this.winner;
+			this.winner = new Array();
+		},
+		setRoundCount : function(){
+			if(this.round > 2){
+				if(this.roundCount == this.round / 2){
+					this.round = this.round / 2;
+					this.roundCount = 1;
+					this.initShuffleList();
+					this.renderTitle();
+				}else{
+					this.roundCount++;	
+				}
+			}else{
+				this.winnerPrint();		
+			}
+		},
+		winnerPrint : function(){
+			this.wrapWindowByMask();
+		},
+		getRoundCount : function(){
+			return this.MathSum(this.roundCount - 1);
+		},
+		MathSum : function(cnt){
+			var temp = 0;
+			for(var i = 0 ; i < cnt; i++){
+				temp = temp + 2;
+			}
+			return temp;
+		},
+		wrapWindowByMask: function(){
+			$('#mainDiv').hide();
+			var maskHeight = $(document).height();  
+			var maskWidth = $(window).width();  
+
+			$('#mask').css({'width':maskWidth,'height':maskHeight});  
+
+			$('#mask').fadeIn(500);      
+			$('#mask').fadeTo("slow",0.8);    
+			
+			var loc = this.winner[0].picture_location;
+			$('#winnerImg').attr("src","img/"+loc);
+			
+		},
+		start : function(config){
+			if(typeof config == 'object'){
+				if(config.round%2 == 0){
+					this.round = config.round ? config.round : 32;	
+				}
+			}
+			this.shuffle();
+			this.renderRound(0,1);
+		}
+	};
+	
+	
+	$('.imgDiv').on('click',function(){
+		var index = $(this).data('index');
+		worldCupModule.setWinner(index);
+		worldCupModule.setRoundCount();
+		var left = worldCupModule.getRoundCount();
+		var right = left + 1;
+		worldCupModule.renderRound(left,right);
+	});
+	
+	$(function(){
+		worldCupModule.start({
+			"round" : 32
+		});
+	});
+</script>
+</html>
